@@ -1,0 +1,134 @@
+/* GLOBAL */
+* {
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header, main, footer {
+    text-align: center;
+}
+
+header, .form, main{
+    margin: 0 auto 70px auto;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* HEADER */
+.logo {
+    width: 120px;
+    margin: 70px 0;
+}
+
+header p {
+    font-size: 14px;
+}
+
+header button {
+    padding: 8px 16px;
+    margin-top: 16px;
+    border: none;
+    background-color: #ff4f4f;
+    font-weight: bold;
+    color: white;
+    border-radius: 4px;
+}
+
+/* FORM */
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 45px;
+    background-color: #ff4f4f;
+    padding: 16px 64px;
+    align-items: center;
+    border-radius: 6px;
+}
+
+.form h2{
+    font-size: 18px;
+    text-align: right;
+    color: #ffffffee;
+}
+
+.form input, .form button {
+    margin-bottom: 4px;
+    padding: 8px 16px;
+    width: 100%;
+    border: 1px solid #ffffff88;
+    border-radius: 4px;
+}
+
+.form input {
+    background: transparent;
+}
+
+.form button {
+    font-weight: bold;
+}
+
+.form input::placeholder{
+    color: #ffffffaa;
+}
+
+/* MAIN */
+main h2{
+    margin-bottom: 70px;
+    color: #000000cc;
+}
+
+main h2 span {
+    color: #ff4f4f;
+}
+
+main .donors{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+main .blood {
+    color: #ff4f4f;
+    font-weight: bold;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+main .blood::before{
+    content: "";
+    background-color: #ff4f4f11;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border-radius: 50%;
+    border-top-right-radius: 0;
+    transform: rotate(-45deg);
+}
+
+main p{
+    margin-top: 45px;
+    margin-bottom: 64px;
+    font-size: 14px;
+}
+
+/* FOOTER */
+footer {
+    margin-top: auto;
+    padding: 16px;
+    border: 1px solid #eee;
+}
