@@ -18,32 +18,22 @@
     </header>
     <section class="form hide">
         <h2>Entre na lista de doadores</h2>
-        <form action="">
-            <input type="text" placeholder="Nome completo">
-            <input type="text" placeholder="E-mail">
-            <input type="text" placeholder="Tipo sanguíneo">
+        <form action="" method="POST">
+            <input type="text" placeholder="Nome completo" name="name">
+            <input type="text" placeholder="E-mail" name="email">
+            <input type="text" placeholder="Tipo sanguíneo" name="blood">
             <button>Quero ajudar</button>
         </form>
     </section>
     <main>
         <h2>Últimos <span>doadores</span></h2>
         <section class="donors">
-            <div class="donor">
-                <div class="blood">A+</div>
-                <p>Nome1</p>
-            </div>
-            <div class="donor">
-                <div class="blood">A+</div>
-                <p>Nome1</p>
-            </div>
-            <div class="donor">
-                <div class="blood">A+</div>
-                <p>Nome1</p>
-            </div>
-            <div class="donor">
-                <div class="blood">A+</div>
-                <p>Nome1</p>
-            </div>
+            {% for donor in donors %}
+                <div class="donor">
+                    <div class="blood">{{donor.blood}}</div>
+                    <p>{{donor.name}}</p>
+                </div>
+            {% endfor %}
         </section>
     </main>
     <footer>Com ❤ Rocketseat.</footer>
